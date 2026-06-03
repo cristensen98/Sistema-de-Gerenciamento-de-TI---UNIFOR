@@ -68,4 +68,4 @@ Matrícula: 2425258
 
 ---
 
-© 2024 - Universidade de Fortaleza (UNIFOR)
+© 2026 - Universidade de Fortaleza (UNIFOR)
