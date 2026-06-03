@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary-color);
+  --color-primary-foreground: white;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --primary-color: #4f46e5;
+  --primary-color-rgb: 79, 70, 229;
+}
+
+@layer base {
+  *, ::before, ::after {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply transition-colors duration-200 bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  svg {
+    @apply outline-none select-none focus:outline-none;
+  }
+
+  .recharts-surface:focus,
+  .recharts-pie-sector:focus,
+  .recharts-bar-rectangle:focus,
+  .recharts-sector:focus,
+  .recharts-rectangle:focus {
+    @apply !outline-none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-slate-400 dark:hover:bg-slate-700 transition-colors;
+}

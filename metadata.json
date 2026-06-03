@@ -1,0 +1,5 @@
+{
+  "name": "Sistema Integrado de Suporte de TI",
+  "description": "Sistema de chamados de suporte de T.I com gestão de incidentes, SLAs, técnicos e relatórios.",
+  "requestFramePermissions": []
+}
