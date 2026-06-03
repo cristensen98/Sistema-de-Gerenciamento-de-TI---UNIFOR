@@ -49,8 +49,7 @@
 ┃  📚 DOCUMENTAÇÃO:                                              ┃
 ┃     • INDICE.md                 ← Mapa completo              ┃
 ┃     • README-SERVIDOR.md        ← COMECE AQUI                ┃
-┃     • GUIA-PRATICO.md           ← Tutorial visual            ┃
-┃     • SERVIDOR-RAPIDO.md        ← Resumo rápido              ┃
+┃     • GUIA-PRATICO.md           ← Tutorial visual            ┃              ┃
 ┃     • SERVIDOR-24-7.md          ← Detalhado                  ┃
 ┃     • PM2-SETUP.md              ← Técnico                    ┃
 ┃     • COMPARATIVO-SOLUCOES.md   ← Alternativas               ┃
@@ -101,10 +100,8 @@
 ┃                   📚 DOCUMENTAÇÃO POR PERFIL                     ┃
 ┠───────────────────────────────────────────────────────────────┤
 ┃                                                                ┃
-┃  👶 Iniciante        → GUIA-PRATICO.md                         ┃
-┃  👨‍💼 Profissional      → SERVIDOR-RAPIDO.md                     ┃
-┃  👨‍💻 Avançado         → SERVIDOR-24-7.md                        ┃
-┃  🔍 Curioso          → COMPARATIVO-SOLUCOES.md                 ┃
+┃  👶 Iniciante        → GUIA-PRATICO.md                         ┃                     ┃
+┃  👨‍💻 Avançado         → SERVIDOR-24-7.md                                        ┃
 ┃  🤓 Técnico          → PM2-SETUP.md                            ┃
 ┃                                                                ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛

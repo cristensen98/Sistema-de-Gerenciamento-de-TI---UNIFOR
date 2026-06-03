@@ -13,3 +13,9 @@ coverage/
 *.tmp
 *.swp
 .idea/
+.md*
+.db*
+.sqlite*
+.bak*
+.tmp*
+*.swp*  
