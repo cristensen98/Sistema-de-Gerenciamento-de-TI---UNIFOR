@@ -16,4 +16,5 @@ coverage/
 .sqlite*
 .bak*
 .tmp*
-*.swp*  
+*.swp*
+*.env
