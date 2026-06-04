@@ -64,9 +64,10 @@ npm start
 ## Desenvolvido por
 
 **Cristensen Ubiratan Moreira Porpino**  
-Matrícula: 2425258 | 
+Matrícula: 2425258  
 **Gabriel Veras Firmino De Sousa**
-Matrícula: 2425172
+Matrícula: 2425172 
+
 
 ---
 
