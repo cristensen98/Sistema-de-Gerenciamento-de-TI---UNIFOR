@@ -1,0 +1,62 @@
+name: SISTI CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código fonte
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Verificação de tipos e lint (TypeScript)
+        run: npm run lint
+
+      - name: Build de produção
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Testes automatizados
+        run: npm test --if-present
+
+      - name: Upload de artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-build
+          path: dist/
+
+  deploy:
+    name: Deploy (Blue-Green)
+    needs: ci
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment: production
+    steps:
+      - name: Deploy via SSH seguro
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/sisti
+            git pull origin main
+            npm ci --production
+            npm run build
+            pm2 reload sisti-app --update-env
+            pm2 save
