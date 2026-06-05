@@ -69,6 +69,15 @@ npm start
 **Gabriel Veras Firmino De Sousa | Matrícula: 2425172**
 
 
+**Vitor Vasconcelos Sales | Matrícula: 2415552**
+
+
+**Thiago Vidal de Sousa | Matrícula: 2226020**
+
+
+**Marcos Thúlio Moreira Prudencio Filho | Matrícula: 2425338**
+
+
 
 ---
 
